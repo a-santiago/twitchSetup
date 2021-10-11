@@ -49,30 +49,24 @@
     </nav>
     <!-- Main Section -->
     <main id="content" class="flex-shrink-0">
-        <div class="container">
-            <div class="row row-cols-1">
-                <div class="col col-md-6">
-                    <h1>REWIND: A Coding Project</h1>
-                    <p>This project reverses a string using a decremented for loop.</p>
-                </div>
-                <div class="col col-md-6">
-                    <h5 class="border-bottom">Enter a string to reverse</h5>
-                    <form class="row gx-3 gy-2">
-                        <div class="col-12">
-                            <input type="text" id="userString" class="form-control" required
-                                placeholder="Enter 2 or more characters" />
-                        </div>
-                        <div class="col-12">
-                            <button type="button" id="btnSubmit" class="btn btn-danger">Reverse!</button>
-                        </div>
-                    </form>
-                    <hr />
-                    <p id="results"></p>
-                </div>
-            </div>
+     <body>
+         <!-- Add a placeholder for the Twitch embed -->
+         <div id="twitch-embed"></div>
 
+         <!-- Load the Twitch embed JavaScript file -->
+         <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
-        </div>
+         <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
+         <script type="text/javascript">
+             new Twitch.Embed("twitch-embed", {
+                 width: 854,
+                 height: 480,
+                 channel: "agrumpyowl",
+                 // Only needed if this page is going to be embedded on other websites
+                 parent: ["embed.example.com", "othersite.example.com"]
+             });
+         </script>
+     </body>
 
     </main>
     <!-- Footer Section -->
